@@ -1,7 +1,21 @@
-This project is designed to simulate a trivia game where the server sends a question to all players who have joined the game through a socket connection and the players can send an answer simultanouesly.
+Multiplayer Trivia (Linux)
 
-This project is designed to run on a linux operating system.
+A server-authoritative trivia game that runs on Linux where players connect over sockets and answer questions in real time. The server broadcasts each question to all connected players. Players submit their answers simultaneously.
 
-The question are read from a plain text file along with the options that the user can select. This is then displayed to every player who can input the number associated with the choice. However, only the first player to input the option will be assigned the points and the game will move forward for every player regardless of whether they answered the question. This is done through a multiplexed I/O.
+How it works
 
-Once all the questions are answered the winner is displayed, the game ends, and all socket connections are closed.
+Questions and multiple-choice options are loaded from a plain text file.
+
+Each question is displayed to every player.
+
+Players enter the number of their chosen option.
+
+Only the first player to submit an option earns the points.
+
+The game advances for everyone whether they answered or not.
+
+The server uses multiplexed I/O to handle many clients at once.
+
+Game end
+
+When all questions have been asked, the server announces the winner, ends the match, and closes all socket connections.
