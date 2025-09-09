@@ -8,7 +8,7 @@ A server‑authoritative trivia game that runs on Linux where players connect ov
 - Players enter the number of their chosen option
 - Only the first player to submit an option earns the points
 - The game advances for everyone whether they answered or not
-- The server uses multiplexed I O to handle many clients at once
+- The server uses multiplexed I/O to handle many clients at once
 
 ## Game end
 When all questions have been asked, the server announces the winner, ends the match, and closes all socket connections.
